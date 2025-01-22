@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import { 
-  Container, 
-  Form, 
-  Button, 
-  Spinner, 
-  Alert 
-} from "react-bootstrap";
+import { Container, Form, Button, Spinner, Alert } from "react-bootstrap";
 import { BsDownload } from "react-icons/bs";
 
 const DownloadPlaylist = () => {
@@ -16,7 +10,7 @@ const DownloadPlaylist = () => {
   const handleDownload = (videoUrl) => {
     setLoading(true);
     setMessage("");
-    fetch("http://localhost:5000/download-video", {
+    fetch("http://192.168.145.159:5000/download-video", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
